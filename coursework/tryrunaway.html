@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="waitforcar.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="mainmenu.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1">
+        Dogname has decided to not stay and scare the animal control officer but
+        to try to run away! Dogname tries to run under the animal control officers
+        legs to try to trick him, but the officer was one step ahead of him and
+        traps him in his net! Now Dogname will never get home!!
+      </p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row">
+      <div class="column2">
+        <img src="officer.png" style="width:240px; height: 205px;"/>
+      </div>
+      <div class="column">
+        <img src="dogcrying.gif" style="width:240px; height: 200px;"/>
+      </div>
+    </div>
+
+
+    <p style="height: 140px; margin-left: 10px; text-align: center;">
+    <b>Thank you for playing Way Home! I hope you enjoyed! You can now return to the main menu and view your completed storylines!<b>
+    <br><br><a style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="mainmenu.html">Return to Main Menu</a>
+    </p>
+
+
+  </body>
+</html>

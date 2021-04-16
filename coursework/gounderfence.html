@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title >
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href="startgame.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1">
+        After squeezing through a gap at the bottom of the fence Dogname
+        hears a load noise coming from the other side of the fence they
+        just climbed through. It sounded like a van door slamming.
+        Dogname decides to look through the gap in the fence and sees an
+        animal control van! Dogname tries to sneak away quietly but the
+        animal control officer hears them and hops over the fence to
+        chase Dogname! Dogname sees a house in the distance. Maybe seeing if
+        someone is inside could help Dogname get away from animal control!
+        But what if no ones inside? What will Dogname do?</p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+
+    <div class="row" style="height: 200px;">
+      <div class="column2">
+        <img src="fence.png" style="width:250px; height: 200px;"/>
+      </div>
+      <div class="column2">
+        <img src="runaway.gif" style="width:240px; height: 250px;"/>
+      </div>
+      <div class="column2">
+        <img src="scare.gif" style="width:240px; height: 150px;"/>
+      </div>
+    </div>
+
+    <div class="txtblock2" style="height:100px;">
+      <br><a id="barkattention" onclick="barkattentioncount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="barkattention.html">Bark outside house to get attention</a>
+      <br>
+      <script>
+      function barkattentioncount() {
+        var barkattentioncounter = 0;
+         barkattentioncounter++;
+         localStorage.setItem('barkattentioncounter', barkattentioncounter);
+      }
+    </script>
+
+      <br><a id="runfield" onclick="fieldcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="runfield.html">Run through field</a>
+      <br>
+      <script>
+      function fieldcount() {
+        var fieldcounter = 0;
+         fieldcounter++;
+         localStorage.setItem('fieldcounter', fieldcounter);
+      }
+    </script>
+    </div>
+
+  </body>
+</html>

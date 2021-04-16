@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title >
+
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href="startgame.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1">
+        Dogname decides to run across the road! But an animal control van pulls up
+        beside Dogname! Dogname tries to sneak away quietly and cross the road but the
+        animal control officer spots them and grabs his net to catch Dogname. Dogname
+        quickly runs onto the road to hopefully loose the animal control officer
+        chasing them. While trying to cross the road Dogname sees a car speeding down
+        the road to pass in front of them. Should Dogname run under the car or wait
+        for it to pass and risk getting caught by the animal control officer?
+      </p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row" style="height: 220px;">
+      <div class="column2">
+        <img src="runaway.gif" style="width:240px; height: 250px;"/>
+      </div>
+      <div class="column">
+        <img src="drivingcar.gif" style="width:240px; height: 200px;"/>
+      </div>
+    </div>
+
+    <div class="txtblock2" style="height: 110px;">
+      <br><a id="goacrossroad" onclick="runundercarcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="runundercar.html">Run under car</a>
+      <br>
+      <script>
+      function runundercarcount() {
+        var runundercarcounter = 0;
+         runundercarcounter++;
+         localStorage.setItem('runundercarcounter', runundercarcounter);
+      }
+    </script>
+
+      <br><a id="goacrossroad" onclick="waitcarcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="waitforcar.html">Wait for car to pass by</a>
+    </div>
+    <script>
+    function waitcarcount() {
+      var waitcarcounter = 0;
+       waitcarcounter++;
+       localStorage.setItem('waitcarcounter', waitcarcounter);
+    }
+  </script>
+
+  </body>
+</html>

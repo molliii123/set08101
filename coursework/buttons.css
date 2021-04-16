@@ -1,0 +1,24 @@
+.button_slide {
+color: #FFF;
+border: 2px solid rgb(130, 3, 113);
+background-color: #C76FBF;
+border-radius: 12px;
+padding: 15px 20px;
+font-size: 20px;
+font-family: Comic Sans MS;
+letter-spacing: 1px;
+cursor: pointer;
+-webkit-transition: ease-out 0.4s;
+-moz-transition: ease-out 0.4s;
+transition: ease-out 0.4s;
+margin: 10px;
+width: 300px;
+text-align: center;
+margin-left: 210px;
+margin-top: auto;
+height: 16px;
+}
+
+.slide_right:hover {
+box-shadow: inset 400px 0 0 0 #E490F6;
+}

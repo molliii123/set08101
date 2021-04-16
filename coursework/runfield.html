@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href="gounderfence.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1" style="width: 770px;">
+        Dogname decided to run across the field and not risk going to the house.
+        With animal control close behind they need to find their way back to
+        civilisation fast! Dogname sees another fence with people walking on the
+        other side. Dogname squeezes through the gap in the fence slowing the
+        animal control officer behind them. As they are running down the
+        footpath, Dogname starts to hear a familiar voice calling their name! “Dogname!
+        Where are you?” Dogname hears in the distance. Just as Dogname is about to run
+        towards the sound animal control catches up to them and jumps infront
+        of their path! Does Dogname run towards the sound and risk getting caught or
+        run in the opposite direction of the animal control officer and hide
+        till the coast is clear?</p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row" style="height: 220px;">
+      <div class="column2">
+        <img src="runaway.gif" style="width:250px; height: 250px;"/>
+      </div>
+      <div class="column">
+        <img src="calling.png" style="width:240px; height: 200px;"/>
+      </div>
+    </div>
+
+    <div class="txtblock2" style="height: 100px;">
+      <br><a id="runsound" onclick="runsoundcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="runsound.html">Run towards sound</a>
+      <br>
+      <script>
+      function runsoundcount() {
+        var runsoundcounter = 0;
+         runsoundcounter++;
+         localStorage.setItem('runsoundcounter', runsoundcounter);
+      }
+    </script>
+
+      <br><a id="ignoresound" onclick="ignoresoundcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="ignoresound.html">Ignore sound</a>
+      <br>
+      <script>
+      function ignoresoundcount() {
+        var ignoresoundcounter = 0;
+         ignoresoundcounter++;
+         localStorage.setItem('ignoresoundcounter', ignoresoundcounter);
+      }
+    </script>
+    </div>
+
+  </body>
+</html>

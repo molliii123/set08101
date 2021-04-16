@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="waitforcar.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="mainmenu.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1" style="width: 760px; margin-bottom:0px">
+        Dogname has decided to scare the animal control officer away to give them
+        enough time to run away and escape him. The animal control officer is
+        reaching for Dogname and so Dogname thinks fast and decides to growl and bark at
+        the officer! The officer jumps back and gives Dogname just enough room to
+        make a run for it! As Dogname is running away, they starts to hear a familiar
+        voice calling their name! “Dogname! Where are you?” they hears in the distance.
+        Running as fast as they can Dogname gets closer and closer to the sound. Dogname
+        hears their name being called over and over again and the last corner they
+        turn Dogname sees their owner! Dogname sees the animal control officer right behind
+        so decides to run as fast as they could to their owner. Dogname makes their way
+        to their owner and is finally reunited with him!! Thanks for your help!
+      </p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row" style="height: 190px;">
+      <div class="column">
+        <img src="scare.gif" style="width:240px; height: 205px;"/>
+      </div>
+      <div class="column">
+        <img src="runaway.gif" style="width:240px; height: 250px;"/>
+      </div>
+      <div class="column">
+        <img src="doghug.png" style="width:240px "/>
+      </div>
+    </div>
+
+    <p style="height: 140px; margin-left: 10px; text-align: center;">
+    <b>Thank you for playing Way Home! I hope you enjoyed! You can now return to the main menu and view your completed storylines!<b>
+    <br><br><a style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="mainmenu.html">Return to Main Menu</a>
+    </p>
+
+  </body>
+</html>

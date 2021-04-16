@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+
+    <style>
+      p {
+        width: 175px;
+        height: 45px;
+        margin-top: 100px;
+      }
+      body {
+        background-image: url('storylines.png');
+        background-repeat: no-repeat;
+        background-size: 800px 700px;
+        margin: 0 0 0 0;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="mainstorylineblock">
+         <a href="mainmenu.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+       </div>
+    </div>
+
+    <div id="instructionwrapper">
+        <div id="instruction1" >
+          <p style="width: 700px; height: 25px; text-align: center; margin-top: 5px;">
+            <b>Below you can view all of your completed storylines!</b>
+          </p>
+          <div style=>
+          <script>
+              if (localStorage.getItem('fencecounter') >= 1) {
+            document.write('<p style="margin: -10px; width: 175px; height: 45px; margin-top: 40px;">You went under the fence!</p>');
+            }
+          </script>
+
+          <script>
+              if (localStorage.getItem('barkattentioncounter') >= 1) {
+            document.write('<p style="margin-left: 210px; margin-top: -90px;">You barked to get attention!</p>');
+            }
+          </script>
+
+          <script>
+              if (localStorage.getItem('staypeoplecounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -80px; width:300px; height: 20px; font-size: 15px;">You stayed with the stranger!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('leavebackcounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -10px; width:300px; height: 20px; font-size: 15px;">You left through the back door!</p>');
+            }
+          </script>
+
+          <script>
+              if (localStorage.getItem('fieldcounter') >= 1) {
+            document.write('<p style="margin-left: 210px; margin-top: 40px;">You ran through the field!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('runsoundcounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -80px; width:300px; height: 20px; font-size: 15px;">You ran towards the sound!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('ignoresoundcounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -10px; width:300px; height: 20px; font-size: 15px;">You ignored the sound!</p>');
+            }
+          </script>
+        </div>
+
+
+
+
+
+          <script>
+              if (localStorage.getItem('acrossroadcounter') >= 1) {
+            document.write('<p style="margin: -10px; width: 175px; height: 45px; margin-top: 80px;">You went across the road!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('runundercarcounter') >= 1) {
+            document.write('<p style="margin-left: 210px; margin-top: -90px;">You ran under the car!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('alleycounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -80px; width:300px; height: 20px; font-size: 15px;">You ran into the alley!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('runcrowdcounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -10px; width:300px; height: 20px; font-size: 15px;">You ran into the crowd of people!</p>');
+            }
+          </script>
+
+
+          <script>
+              if (localStorage.getItem('waitcarcounter') >= 1) {
+            document.write('<p style="margin-left: 210px; margin-top: 10px;">You waited for the car to pass!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('tryruncounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -80px; width:300px; height: 20px; font-size: 15px;">You tried to run away!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('scareofficercounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -10px; width:300px; height: 20px; font-size: 13px;">You scared the animal control officer!</p>');
+            }
+          </script>
+
+
+
+
+
+          <script>
+              if (localStorage.getItem('followpeoplecounter') >= 1) {
+            document.write('<p style="margin: -10px; width: 175px; height: 45px; margin-top: 80px;">You followed the people walking!</p>');
+            }
+          </script>
+
+          <script>
+              if (localStorage.getItem('barncounter') >= 1) {
+            document.write('<p style="margin-left: 210px; margin-top: -90px;">You ran into the abandonded barn!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('boxcounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -80px; width:300px; height: 20px; font-size: 15px;">You hid in the box!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('tablecounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -10px; width:300px; height: 20px; font-size: 15px;">You hid under the table!</p>');
+            }
+          </script>
+
+
+          <script>
+              if (localStorage.getItem('acrossroadruncounter') >= 1) {
+            document.write('<p style="margin-left: 210px; margin-top: 10px;">You ran across the road!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('loseofficercounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -80px; width:300px; height: 20px; font-size: 14px;">You tried to lose officer in crowd!</p>');
+            }
+          </script>
+          <script>
+              if (localStorage.getItem('trafficcounter') >= 1) {
+            document.write('<p style="margin-left: 430px; margin-top: -10px; width:300px; height: 20px; font-size: 13px;">You ran into traffic!!</p>');
+            }
+          </script>
+
+        </div>
+        </div>
+
+
+
+  </body>
+</html>

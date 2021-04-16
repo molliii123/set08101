@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="buttons.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+
+    <meta charset="utf-8">
+    <title >Way Home</title>
+
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href=".html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1">
+        Dogname the dog somehow found their way out of their owners garden and cant find
+        their way back! They seem to have wondered into a neighbourhood where
+        they see a fence with enough room to fit under it, a road with many
+        cars passing by and a group of people walking around a corner in
+        the distance. Where will they go?</p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row">
+      <div class="column">
+        <img src="fence.png" style="width:240px; height: 205px;"/>
+      </div>
+      <div class="column">
+        <img src="road.png" style="width:240px; height: 160px;"/>
+      </div>
+      <div class="column">
+        <img src="peoplewalking.jpg" style="width:240px "/>
+      </div>
+    </div>
+
+    <div class="imgblock">
+      <img src="running.gif" width="250" height="200" align="right"/>
+    </div>
+
+    <div class="txtblock2">
+      <br><a id="gounderfence" onclick="fencecount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="gounderfence.html">Go under fence</a>
+      <br>
+      <script>
+      function fencecount() {
+        var fencecounter = 0;
+         fencecounter++;
+         localStorage.setItem('fencecounter', fencecounter);
+      }
+    </script>
+
+      <br><a id="goacrossroad" onclick="acrossroadcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="runacrossroad.html">Run across road</a>
+      <br>
+      <script>
+      function acrossroadcount() {
+        var acrossroadcounter = 0;
+         acrossroadcounter++;
+         localStorage.setItem('acrossroadcounter', acrossroadcounter);
+      }
+    </script>
+
+      <br><a id="followpeople" onclick="followpeoplecount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="followpeople.html">Follow walking people</a>
+      <br>
+      <script>
+      function followpeoplecount() {
+        var followpeoplecounter = 0;
+         followpeoplecounter++;
+         localStorage.setItem('followpeoplecounter', followpeoplecounter);
+      }
+    </script>
+    </div>
+
+  </body>
+</html>

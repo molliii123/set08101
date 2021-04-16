@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title >
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href="gounderfence.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1" style="width: 765px;">
+        Dogname decided to take the risk and run to the house. With animal control
+        close behind Dogname makes it to the house and starts barking loudly to get
+        the homeowners attention. Thankfully someone was in the house and
+        came out to greet them! They take Dogname inside and get them some water
+        while trying to decide what to do. Dogname looks out the window
+        and sees the animal control officer walking past the house thankfully
+        no knowing where Dogname went! Now that Dogname knows animal control is gone
+        Dogname needs to decide whether to stay with the homeowner and risk not
+        being able to go home or escape through an open back door and hopefully
+        find their way back home but risk animal control still being in the area!
+        What will Dogname do?</p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row" style="height: 240px;">
+      <div class="column2">
+        <img src="runaway.gif" style="width:220px; height: 200px; margin-top: 50px;"/>
+      </div>
+      <div class="column">
+        <img src="opendoor.png" style="width:220px; height: 200px;"/>
+      </div>
+      <div class="column">
+        <img src="officer.png" style="width:220px; height: 200px;"/>
+      </div>
+    </div>
+
+    <div class="txtblock2" style="height: 100px;">
+      <br><a id="staypeople" onclick="staypeoplecount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="stay.html">Stay with people</a>
+      <br>
+      <script>
+      function staypeoplecount() {
+        var staypeoplecounter = 0;
+         staypeoplecounter++;
+         localStorage.setItem('staypeoplecounter', staypeoplecounter);
+      }
+    </script>
+
+      <br><a id="leavebackdoor" onclick="leavebackcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="leavebackdoor.html">Leave through back door</a>
+      <br>
+      <script>
+      function leavebackcount() {
+        var leavebackcounter = 0;
+         leavebackcounter++;
+         localStorage.setItem('leavebackcounter', leavebackcounter);
+      }
+    </script>
+    </div>
+
+  </body>
+</html>

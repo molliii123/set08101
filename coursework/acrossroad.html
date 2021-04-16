@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href="followpeople.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1">
+        Dogname has decided to run across the road to hopefully gain some distance
+        from the animal control officer! With the animal control officer close
+        behind Dogname needs to decide whether to try to lose the officer by running
+        into a crowd of people on the footpath beside them or to run through
+        traffic to gain some distance from him! What will Dogname do?
+      </p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row" style="height: 240px;">
+      <div class="column">
+        <img src="runaway.gif" style="width:240px; height: 250px;"/>
+      </div>
+      <div class="column">
+        <img src="people.png" style="width:240px; height: 200px;"/>
+      </div>
+      <div class="column">
+        <img src="drivingcar.gif" style="width:240px "/>
+      </div>
+    </div>
+
+    <div class="txtblock2" style="height: 100px;">
+      <br><a id="loseofficer" onclick="loseofficercount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="loseofficercrowd.html">Lose animal control in crowd of people</a>
+      <br>
+      <script>
+      function loseofficercount() {
+        var loseofficercounter = 0;traffic
+         loseofficercounter++;
+         localStorage.setItem('loseofficercounter', loseofficercounter);
+      }
+    </script>
+
+      <br><a id="traffic" onclick="trafficcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="trafficrun.html">Run through traffic</a>
+    </div>
+    <script>
+    function trafficcount() {
+      var trafficcounter = 0;
+       trafficcounter++;
+       localStorage.setItem('trafficcounter', trafficcounter);
+    }
+  </script>
+
+  </body>
+</html>

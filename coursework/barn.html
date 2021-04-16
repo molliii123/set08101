@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href="followpeople.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1">
+        Dogname has decided to run into the abandoned barn in hopes of finding a
+        place to hide from the animal control officer! When Dogname finds their way
+        into the barn, Dogname sees an empty box in a dark corner and a table in
+        the other corner of the barn. With the animal control officer close
+        behind where will Dogname hide?
+      </p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row">
+      <div class="column">
+        <img src="barn.png" style="width:240px; height: 205px;"/>
+      </div>
+      <div class="column">
+        <img src="box.png" style="width:240px; height: 160px;"/>
+      </div>
+      <div class="column">
+        <img src="table.png" style="width:240px "/>
+      </div>
+    </div>
+
+    <div class="txtblock2" style="height:105px;">
+      <br><a id="box" onclick="boxcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="hideinbox.html">Hide in box</a>
+      <br>
+      <script>
+      function boxcount() {
+        var boxcounter = 0;
+         boxcounter++;
+         localStorage.setItem('boxcounter', boxcounter);
+      }
+    </script>
+
+      <br><a id="table" onclick="tablecount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="hideundertable.html">Hide under table</a>
+    </div>
+    <script>
+    function tablecount() {
+      var tablecounter = 0;
+       tablecounter++;
+       localStorage.setItem('tablecounter', tablecounter);
+    }
+  </script>box
+
+  </body>
+</html>

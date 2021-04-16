@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="runundercar.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="mainmenu.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1" style="width: 760px">
+        Dogname has decided to run into the crowd of walking people to hopefully
+        not be seen by the animal control officer. As Dogname is walking in the
+        crowd of people, they start to hear a familiar voice calling their name!
+        “Dogname! Where are you?” Dogname hears in the distance. Leaving the crowd of
+        people and running as fast as they can Dogname gets closer and closer to the
+        sound. Dogname hears their name being called over and over again and the last
+        corner Dogname turns Dogname sees their owner! Dogname sees the animal control officer
+        right behind so decides to run as fast as they could to their owner.
+        Dogname makes their way to their owner and is finally reunited with him!!
+        Thanks for your help!
+      </p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row" style="height: 200px;">
+      <div class="column">
+        <img src="runaway.gif" style="width:240px; height: 250px;"/>
+      </div>
+      <div class="column">
+        <img src="people.png" style="width:240px; height: 200px;"/>
+      </div>
+      <div class="column">
+        <img src="doghug.png" style="width:240px "/>
+      </div>
+    </div>
+
+    <p style="height: 120px; margin-left: 10px; text-align: center;">
+    <b>Thank you for playing Way Home! I hope you enjoyed! You can now return to the main menu and view your completed storylines!<b>
+    <br><br><a style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="mainmenu.html">Return to Main Menu</a>
+    </p>
+
+  </body>
+</html>

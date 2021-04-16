@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" type="text/css" href="buttons.css"/>
+  <meta charset="utf-8">
+    <title>Way Home</title>
+      <script src="namelocal.js"></script>
+
+      <style>
+      input[type=text] {
+        padding: 5px;
+        font-family: 'Comic Sans MS';
+        font-size: 100%;
+        margin: 5px;
+        background-color: #EDCAF4;
+        border-color: #910CAD;
+        border-radius: 12px;
+        color: #611F6F;
+      }
+
+      input[type=submit] {
+        padding: 5px;
+        font-family: 'Comic Sans MS';
+        font-size: 100%;
+        margin: 10px;
+        color: #611F6F;
+        background-color: #EDCAF4;
+        border-radius: 12px;
+        border-color: #910CAD;
+      }
+      </style>
+</head>
+
+
+<body>
+
+  <div id="topbuttons">
+       <a href="mainmenu.html" style="font-family: Comic Sans MS; margin:25px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+  </div>
+
+  <div id="namedogwrapper">
+      <div id="namedogtxt" >
+        <p style="width: 300px; text-align: center;">
+          <b>Enter the name you want for your dog in the story in the white
+          text box below! Then hit the submit button! And then hit the startgame
+          button! </b>
+        </p>
+      </div>
+  </div>
+
+<form name="form" method="GET">
+      <input style="position:absolute; top:55%; margin-left: 300px; width:200px;" type="text" id="userInput" required placeholder="Dog's Name" />
+      <input style="position:absolute; top:60%; margin-left: 300px; width:214px;" type="submit" value="Submit" onclick="othername();" />
+    </form>
+</body>
+
+<div class="button_slide slide_right" style="margin-top: 150px; margin-left: 300px; width: 170px;">
+  <a href="startgame.html" style="text-decoration:none; color: #4D236F;" type="button"><b>Start Game</b></a>
+</div>
+
+</html>

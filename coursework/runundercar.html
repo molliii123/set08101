@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="utf-8">
+    <title >Way Home</title>
+  </head>
+
+  <body>
+
+    <div id="topbuttons">
+      <div class="topbuttonblock">
+         <a href="mainmenu.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Main Menu </a>
+         <a href="runacrossroad.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Previous Page</a>
+         <a href="" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Save Progress</a>
+         <a href="instructions2.html" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Game Instructions</a>
+         <a href="JavaScript:window.close()" style="margin:10px;text-decoration:none; color: #980C8B; background-color: #FBC9FB; border-style: solid; border-width: 4px; border-color: #7E20CF; border-radius: 12px;" type="button">Quit Game</a>
+       </div>
+    </div>
+
+    <div class="txtblock1">
+      <p id="1">
+        Dogname decides to take the risk and run under the moving car in order to
+        gain some distance from the animal control officer. Dogname gets past safely
+        and makes it to the other side of the road with the animal control
+        officer still being stuck on the other side of the road behind the
+        passing cars. Now that Dogname has made it to the other side do they run into
+        a crowd of people to gain even more distance from the animal control
+        officer or run into an alleyway to hopefully find a place to hide?
+      </p>
+    </div>
+
+    <script>
+      window.onload = function nameFun(){
+      document.body.innerHTML = document.body.innerHTML.replace(/Dogname/gi, localStorage.getItem("userInput"));
+    }
+      </script>
+
+    <div class="row" style="height: 210px;">
+      <div class="column">
+        <img src="runaway.gif" style="width:240px; height: 250px;"/>
+      </div>
+      <div class="column">
+        <img src="people.png" style="width:240px; height: 220px;"/>
+      </div>
+      <div class="column">
+        <img src="alley.jpg" style="width:240px "/>
+      </div>
+    </div>
+
+    <div class="txtblock2" style="height: 105px;">
+      <br><a id="crowdpeople" onclick="runintocrowdcount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="runintocrowd.html">Run into crowd of people</a>
+      <br>
+      <script>
+      function runintocrowdcount() {
+        var runcrowdcounter = 0;
+         runcrowdcounter++;
+         localStorage.setItem('runcrowdcounter', runcrowdcounter);
+      }
+    </script>
+
+      <br><a id="alley" onclick="alleycount();" style="text-decoration:none; color: #CA39CA; border-style: solid; border-width: 3px; border-color: #C289F4; border-radius: 12px;" href="runintoalley.html">Run away from people and into alleyway</a>
+    </div>
+    <script>
+    function alleycount() {
+      var alleycounter = 0;
+       alleycounter++;
+       localStorage.setItem('alleycounter', alleycounter);
+    }
+  </script>
+
+  </body>
+</html>
